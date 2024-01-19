@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import PageNav from "./PageNav";
 
 const Product = () => {
   return (
-    <div>Product</div>
-  )
-}
+    <>
+      <PageNav />
+      <div>Product</div>
+    </>
+  );
+};
 
-export default Product
+export default Product;

@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import PageNav from "./PageNav";
 
 const PageNotFound = () => {
   return (
-    <div>PageNotFound</div>
-  )
-}
+    <>
+      <PageNav />
+      <div>PageNotFound</div>
+    </>
+  );
+};
 
-export default PageNotFound
+export default PageNotFound;
