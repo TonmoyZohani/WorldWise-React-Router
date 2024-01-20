@@ -1,5 +1,6 @@
 import React from "react";
-import PageNav from "./PageNav";
+import PageNav from "../components/PageNav";
+
 
 const Product = () => {
   return (
