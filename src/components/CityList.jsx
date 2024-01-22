@@ -8,7 +8,7 @@ const CityList = ({ cities }) => {
   return (
     <div className={styles.cityList}>
       {cities.map((city) => (
-        <CityItem city={city} />
+        <CityItem city={city} key={city.id}/>
       ))}
     </div>
   );
