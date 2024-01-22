@@ -1,10 +1,17 @@
-import React from 'react'
-import styles from './CityList.module.css';
+import React from "react";
+import styles from "./CityList.module.css";
+import CityItem from "./CityItem";
 
-const CityList = () => {
+const CityList = ({ cities }) => {
+  console.log(cities);
+
   return (
-    <div className={styles.cityList}>CityList</div>
-  )
-}
+    <div className={styles.cityList}>
+      {cities.map((city) => (
+        <CityItem city={city} />
+      ))}
+    </div>
+  );
+};
 
-export default CityList
+export default CityList;
