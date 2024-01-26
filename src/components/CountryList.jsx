@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./CountryList.module.css";
 import CountryItem from "./CountryItem";
+import { CitiesContext } from "../contexts/CitiesProvider";
 
-const CountryList = ({ cities }) => {
-  console.log(cities);
+const CountryList = () => {
+  const { cities } = useContext(CitiesContext);
 
   const countries = cities.reduce((arr, city) => {
     if (!arr.some((el) => el.country === city.country)) {
@@ -18,7 +19,7 @@ const CountryList = ({ cities }) => {
   return (
     <ul className={styles.countryList}>
       {countries.map((country) => (
-        <CountryItem country={country}/>
+        <CountryItem country={country} />
       ))}
     </ul>
   );
