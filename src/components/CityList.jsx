@@ -2,8 +2,9 @@ import React from "react";
 import styles from "./CityList.module.css";
 import CityItem from "./CityItem";
 
-const CityList = ({ cities }) => {
-  console.log(cities);
+const CityList = () => {
+
+  consr
 
   return (
     <div className={styles.cityList}>
