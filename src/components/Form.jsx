@@ -52,7 +52,14 @@ function Form() {
 
       <div className={styles.buttons}>
         <button>Add</button>
-        <button onClick={()=>navigate(-1)}>&larr; Back</button>
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            navigate(-1);
+          }}
+        >
+          &larr; Back
+        </button>
       </div>
     </form>
   );
