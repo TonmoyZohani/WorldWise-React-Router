@@ -1,4 +1,4 @@
-import { useParams, useSearchParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import styles from "./City.module.css";
 import { useEffect } from "react";
 import { useCities } from "../contexts/CitiesProvider";
@@ -7,6 +7,7 @@ function City() {
   // TEMP DATA
   const { id } = useParams();
   const { getCity, currentCity } = useCities();
+  const navigate = useNavigate();
 
   useEffect(() => {
     getCity(id);
@@ -61,7 +62,7 @@ function City() {
       </div>
 
       <div>
-        <button>Back</button>
+        <button onClick={() => navigate(-1)}>Back</button>
       </div>
     </div>
   );
