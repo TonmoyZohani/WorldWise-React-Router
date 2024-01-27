@@ -17,18 +17,17 @@ const CitiesProvider = ({ children }) => {
   function getCity(id) {
     const url = `http://localhost:8000/cities/${id}`;
 
-    useEffect(() => {
-      fetch(url)
-        .then((res) => res.json())
-        .then((data) => setCurrentCity(data));
-    }, []);
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setCurrentCity(data));
   }
 
   return (
     <CitiesContext.Provider
       value={{
         cities,
-        getCity
+        getCity,
+        currentCity,
       }}
     >
       {children}
